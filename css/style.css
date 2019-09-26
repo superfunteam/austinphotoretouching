@@ -14,3 +14,57 @@ body{
 .jx-knightlab{
 	display: none !important;
 }
+
+.toggle{
+	display: inline-block;
+	background:rgba(0,0,0,.75);
+	border-radius:100px;
+	position: absolute;
+	cursor: pointer;
+	z-index: 10;
+	margin:1rem;
+}
+
+.toggle span{
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	border-radius:100px;
+	padding:1rem 1.5rem;
+	position: relative;
+	z-index: 2;
+}
+
+.toggle span:last-child{
+	color:rgba(255,255,255,.75);
+}
+
+.toggle.after span{
+	color:rgba(255,255,255,.75);
+}
+
+.toggle.after span:last-child{
+	color:black;
+}
+
+
+.toggle:after{
+	content:" ";
+	position: absolute;
+	display: block;
+	top:0;
+	left:0;
+	width:50%;
+	bottom:0;
+	background:white;
+	color:black;
+	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.25);
+	border-radius: 100px;
+	z-index: 1;
+	transition: .2s ease all;
+}
+
+.toggle.after:after{
+	left:52.5%;
+	width:47.5%;
+}
