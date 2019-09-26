@@ -19,6 +19,12 @@ body{
 	font-weight: 400;
 }
 
+.nav a{
+	text-decoration: none;
+	color:black;
+	margin-left: 1rem;
+}
+
 .jx-knightlab{
 	display: none !important;
 }
