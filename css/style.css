@@ -53,7 +53,7 @@ body{
 	position: absolute;
 	display: block;
 	top:0;
-	left:0;
+	left:-.5px;
 	width:50%;
 	bottom:0;
 	background:white;
@@ -61,7 +61,8 @@ body{
 	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.25);
 	border-radius: 100px;
 	z-index: 1;
-	transition: .2s ease all;
+	transition: .2s ease-out all;
+	border:1px solid white;
 }
 
 .toggle.after:after{

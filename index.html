@@ -22,8 +22,8 @@
 
 	<div class="item">
 		<a class="toggle after" onclick="before(this);">
-		<span href="#" onclick="event.preventDefault(); juxtapose.sliders[0].updateSlider(1, true);" class="before">Before</span>
-		<span href="#" class="active" onclick="event.preventDefault(); juxtapose.sliders[0].updateSlider(99, true);" class="after">After</span>
+		<span>Before</span>
+		<span>After</span>
 		</a>
 	</div>
 	<div id="juxtapose-wrapper" class="juxtapose" data-startingposition="99%" data-showlabels="false" data-showcredits="false" data-animate="true">
@@ -38,26 +38,18 @@
 <script type="text/javascript" src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
 
 <script>
-	
-	function flip(elem) {
-    // get all 'a' elements
-    var a = document.getElementsByTagName('a');
-    // loop through all 'a' elements
-    for (i = 0; i < a.length; i++) {
-        // Remove the class 'active' if it exists
-        a[i].classList.remove('after')
-    }
-    // add 'active' classs to the element that was clicked
-    // elem.classList.add('after');
-}
 
 function before(x) {
   if(x.classList.contains("after")){
 
+  	juxtapose.sliders[0].updateSlider(1, true);
      x.classList.remove("after");
+     
 
   }else{
+  	juxtapose.sliders[0].updateSlider(99, true);
      x.classList.add("after");
+     
   }
 }
 </script>
