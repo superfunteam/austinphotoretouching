@@ -89,11 +89,13 @@ a{
 .item .before{
 	position: absolute;
 	left:0;
+	-webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 	clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 	transition: .5s ease clip-path;
 }
 
 .flip .item .before{
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
