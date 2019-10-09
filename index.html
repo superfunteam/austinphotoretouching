@@ -30,62 +30,68 @@
 	</div>
 
 	<div class="clearfix mb4">
-		<div class="flex mxn3">
-			<div class="card col-4 m3">
+		<div class="mxn3">
+			<div class="card sm-col sm-col-4 p3">
 				<p class="bold">Wedding Photography Retouching</p>
 				<p class="roman">Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod.</p>
 			 </div>
-			<div class="card col-4 m3">
+			<div class="card sm-col sm-col-4 p3">
 				<p class="bold">Product & Catalog Retouching</p>
 				<p class="roman">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Sed posuere consectetur est at lobortis.</p>
 			 </div>
-			<div class="card col-4 m3">
+			<div class="card sm-col sm-col-4 p3">
 				<p class="bold">Model & Photoshoot Retouching</p>
 				<p class="roman">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis.</p>
 			 </div>
 		</div>
 	</div>
 
-	<div class="item mb4">
-		<a class="toggle after" onclick="before(this);">
-		<span>Before</span>
-		<span>After</span>
-		</a>
+	
 
-		<div id="juxtapose-wrapper" class="juxtapose" data-startingposition="99%" data-showlabels="false" data-showcredits="false" data-animate="true">
-		    <img src="images/002-AFTER-mike-misa.jpg" />
-		    <img src="images/001-BEFORE-mike-misa.jpg" />
+	<div class="bar">
+		<div class="max-width-4 mx-auto">
+			<div class="flex justify-between">
+		<a href="#" class="flip">Viewing</a>
+		<a href="#" class="dark">Mode</a>
+		</div>
 		</div>
 	</div>
-	
-	<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
-	<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
 
-
-	<div class="clearfix mb4">
-		<div class="col col-6">I'm column one!</div>
-  		<div class="col col-6">I'm column two!</div>
+	<div class="item mb4">
+		<img src="images/001-AFTER-mike-misa.jpg" loading="lazy" />
+			<img src="images/001-BEFORE-mike-misa.jpg" class="before" loading="lazy" />
 	</div>
 
+	<div class="item mb4">
+		<img src="images/002-AFTER-joro.jpg" loading="lazy" />
+			<img src="images/002-BEFORE-joro.jpg" class="before" loading="lazy" />
+	</div>
+
+	<div class="mb4 pb4"></div>
+
+
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.0/lib/darkmode-js.min.js"></script>
+<script>
+
+</script>
 
 <script type="text/javascript" src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
 
 <script>
-
-function before(x) {
-  if(x.classList.contains("after")){
-
-  	juxtapose.sliders[0].updateSlider(1, true);
-     x.classList.remove("after");
-     
-
-  }else{
-  	juxtapose.sliders[0].updateSlider(99, true);
-     x.classList.add("after");
-     
-  }
-}
+$(document).ready(function(){
+   $('.flip').click(function(){
+       $('body').toggleClass('flip');
+       return false;
+   });
+   $('.dark').click(function(){
+       $('body').toggleClass('dark');
+		const darkmode =  new Darkmode();
+		darkmode.toggle();
+       return false;
+   });
+});
 </script>
 
 

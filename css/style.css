@@ -13,6 +13,10 @@ body{
 	font-weight: 400;
 }
 
+a{
+	color:#000;
+}
+
 .roman{
 	font-family: "Hoefler Text A", "Hoefler Text B";
 	font-style: normal;
@@ -25,61 +29,73 @@ body{
 	margin-left: 1rem;
 }
 
-.jx-knightlab{
-	display: none !important;
-}
-
-.toggle{
-	display: inline-block;
-	background:rgba(0,0,0,.75);
-	border-radius:100px;
-	position: absolute;
-	cursor: pointer;
-	z-index: 10;
-	margin:1rem;
-}
-
-.toggle span{
-	display: inline-block;
-	text-decoration: none;
-	color: black;
-	border-radius:100px;
-	padding:1rem 1.5rem;
-	position: relative;
-	z-index: 2;
-}
-
-.toggle span:last-child{
-	color:rgba(255,255,255,.75);
-}
-
-.toggle.after span{
-	color:rgba(255,255,255,.75);
-}
-
-.toggle.after span:last-child{
-	color:black;
-}
-
-
-.toggle:after{
-	content:" ";
-	position: absolute;
-	display: block;
-	top:0;
-	left:-.5px;
-	width:50%;
+.bar{
+	background:#fff;
+	position: fixed;
 	bottom:0;
-	background:white;
-	color:black;
-	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.25);
-	border-radius: 100px;
-	z-index: 1;
-	transition: .2s ease-out all;
-	border:1px solid white;
+	left:0;
+	right:0;
+	z-index: 10;
+	font-family: "Hoefler Text A", "Hoefler Text B";
+	font-style:italic;
+	padding:1.5rem 0;
 }
 
-.toggle.after:after{
-	left:52.5%;
-	width:47.5%;
+.bar a{
+	text-decoration: none;
 }
+
+.dark .bar{
+	background:#000;
+}
+
+.dark .bar a{
+	color:#fff;
+}
+
+.bar .flip:after{
+	content:" After";
+	font-family: "Decimal A", "Decimal B";
+	font-style: normal;
+	font-weight: bold;
+	padding:0 4px;
+}
+
+.flip .bar .flip:after{
+	content:" Before";
+}
+
+.bar .dark:before{
+	content:"Light ";
+	font-family: "Decimal A", "Decimal B";
+	font-style: normal;
+	font-weight: bold;
+	padding:0 4px;
+}
+
+.dark .bar .dark:before{
+	content:"Dark ";
+}
+
+.item{
+	position: relative;
+}
+
+.item img{
+	max-width:100%;
+	height:auto;
+}
+
+.item .before{
+	position: absolute;
+	left:0;
+	clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	transition: .5s ease clip-path;
+}
+
+.flip .item .before{
+	position: absolute;
+	left:0;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
