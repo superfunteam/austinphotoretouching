@@ -45,11 +45,11 @@ a{
 	text-decoration: none;
 }
 
-.dark .bar{
+.darkmode--activated .bar{
 	background:#000;
 }
 
-.dark .bar a{
+.darkmode--activated .bar a{
 	color:#fff;
 }
 
@@ -73,7 +73,7 @@ a{
 	padding:0 4px;
 }
 
-.dark .bar .dark:before{
+.darkmode--activated .bar .dark:before{
 	content:"Dark ";
 }
 
