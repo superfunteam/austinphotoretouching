@@ -75,15 +75,15 @@
 </head>
 <body class="bg-amber-50 dark:bg-emerald-950 text-amber-950 dark:text-white min-h-screen p-8 flex flex-col items-center gap-32">
     <!-- Top Navigation -->
-    <nav class="w-full max-w-7xl mx-auto py-4 flex justify-between items-center">
-        <div class="title flex gap-2 items-center">
-            <span class="material-symbols-outlined text-4xl">monochrome_photos</span>
-            <h1 class="text-lg font-medium">Austin Photo Retouching</h1>
+    <nav class="w-full max-w-7xl mx-auto py-4 flex justify-between items-start md:items-center">
+        <div class="title flex gap-2 items-start md:items-center">
+            <span class="material-symbols-outlined text-2xl md:text-4xl leading-none pt-0.5 md:pt-0">monochrome_photos</span>
+            <h1 class="text-lg font-semibold">Austin Photo <br class="md:hidden">Retouching</h1>
         </div>
-        <ul class="flex space-x-8 items-center text-base">
+        <ul class="flex flex-col md:flex-row gap-y-1 md:space-x-8 items-end md:items-center text-base">
             <li><a href="#portfolio" class="text-gray-900 dark:text-gray-100 hover:underline">Portfolio</a></li>
             <li><a href="#contact" class="text-gray-900 dark:text-gray-100 hover:underline">Services</a></li>
-            <li><a href="#contact" class="bg-emerald-800 dark:bg-white text-white dark:text-emerald-950 px-6 py-4 hover:bg-emerald-950 dark:hover:bg-emerald-50">Get in Touch</a></li>
+            <li class="-order-1 lg:order-1"><a href="#contact" class="lg:bg-emerald-800 dark:lg:bg-white text-emerald-800 dark:text-emerald-100 lg:text-white dark:lg:text-emerald-950 md:px-6 md:py-4 lg:hover:bg-emerald-950 dark:lg:hover:bg-emerald-50 underline md:no-underline font-bold">Get in Touch</a></li>
         </ul>
     </nav>
 
@@ -199,7 +199,7 @@
 
 <div class="services flex flex-col gap-8">
 
-    <div class="">
+    <div>
         <h2 class="text-4xl leading-snug">Services</h2>
         <p class="mt-2 text-lg leading-8">I've done it all along the way, and I'm ready to do it again.</p>
       </div>
@@ -238,7 +238,7 @@
     
 </div>
 
-<div id="contact" class="contact isolate">
+<div id="contact" class="contact isolate -order-1 md:order-1">
   <div class="">
     <h2 class="text-4xl leading-snug">Let's Chat!</h2>
     <p class="mt-2 text-lg leading-8">I'd love to hear about your next project, I'm ready to help.</p>
