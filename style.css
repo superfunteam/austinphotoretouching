@@ -1,0 +1,27 @@
+
+body {
+    font-family: "prestige-elite-std", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-prestige{
+    font-family: "prestige-elite-std", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+.font-prestige.italic, em{
+    font-family: "prestige-elite-std", monospace;
+    font-weight: 400;
+    font-style: italic;
+}
+.font-prestige.font-bold, strong, bold{
+    font-family: "prestige-elite-std", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+.font-prestige.font-bold.italic, strong>em, em>strong {
+    font-family: "prestige-elite-std", monospace;
+    font-weight: 700;
+    font-style: italic;
+}
