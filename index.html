@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Austin Photo Retouching | Angie Wimberly</title>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,200,0..1,-50..200" />
     <link rel="stylesheet" href="https://use.typekit.net/wes3vwa.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -13,73 +13,18 @@
         };
     </script>
     <link rel="stylesheet" href="style.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Check for saved user preference or system preference
-            const userPreference = localStorage.getItem('theme');
-            const systemPreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            
-            if (userPreference) {
-                document.documentElement.classList.toggle('dark', userPreference === 'dark');
-            } else if (systemPreference) {
-                document.documentElement.classList.add('dark');
-            }
-
-            // Toggle theme function
-            const toggleTheme = () => {
-                const isDark = document.documentElement.classList.toggle('dark');
-                localStorage.setItem('theme', isDark ? 'dark' : 'light');
-                updateIcon(isDark);
-            };
-
-            // Update icon based on theme
-            const updateIcon = (isDark) => {
-                const iconElement = document.getElementById('theme-icon');
-                iconElement.textContent = isDark ? 'light_mode' : 'dark_mode';
-            };
-
-            // Attach event listener to button
-            document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
-
-            // Set the initial icon
-            updateIcon(document.documentElement.classList.contains('dark'));
-
-            // Toggle switch button for showing after images
-            const switchButton = document.querySelector('.setting button[role="switch"]');
-            const switchLabel = document.querySelector('.setting span strong');
-            const beforeElements = document.querySelectorAll('.item .before');
-
-            const toggleSwitch = () => {
-                const isEnabled = switchButton.getAttribute('aria-checked') === 'true';
-                switchButton.setAttribute('aria-checked', !isEnabled);
-                switchButton.classList.toggle('bg-amber-600', !isEnabled);
-                switchButton.classList.toggle('bg-amber-200', isEnabled);
-                const toggleSpan = switchButton.querySelector('span[aria-hidden="true"]');
-                toggleSpan.classList.toggle('translate-x-5', !isEnabled);
-                toggleSpan.classList.toggle('translate-x-0', isEnabled);
-                switchLabel.textContent = !isEnabled ? 'before' : 'after';
-
-                // Toggle visibility of before elements
-                beforeElements.forEach((beforeElement) => {
-                    beforeElement.classList.toggle('opacity-100', !isEnabled);
-                });
-            };
-
-            switchButton.addEventListener('click', toggleSwitch);
-        });
-    </script>
 </head>
 <body class="bg-amber-50 dark:bg-emerald-950 text-amber-950 dark:text-white min-h-screen p-8 flex flex-col items-center gap-20 md:gap-32">
     <!-- Top Navigation -->
     <nav class="w-full max-w-7xl mx-auto py-4 flex justify-between items-start md:items-center">
         <div class="title flex gap-3 md:gap-2 items-start md:items-center">
-            <span class="material-symbols-outlined text-2xl md:text-4xl leading-none pt-0">monochrome_photos</span>
+            <span class="material-symbols-outlined text-2xl md:text-4xl leading-none pt-0">auto_awesome_motion</span>
             <h1 class="text-lg font-semibold leading-tight">Austin Photo <br class="md:hidden">Retouching</h1>
         </div>
         <ul class="flex flex-col md:flex-row gap-y-1 md:space-x-8 items-end md:items-center text-base">
             <li><a href="#portfolio" class="text-gray-900 dark:text-gray-100 hover:underline">Portfolio</a></li>
             <li><a href="#contact" class="text-gray-900 dark:text-gray-100 hover:underline">Services</a></li>
-            <li class="-order-1 lg:order-1"><a href="#contact" class="lg:bg-emerald-800 dark:lg:bg-white text-emerald-800 dark:text-emerald-100 lg:text-white dark:lg:text-emerald-950 md:px-6 md:py-4 lg:hover:bg-emerald-950 dark:lg:hover:bg-emerald-50 underline md:no-underline font-bold">Get in Touch</a></li>
+            <li class="-order-1 lg:order-1"><a href="#contact" class="lg:bg-amber-200 dark:lg:bg-emerald-800 text-emerald-800 dark:text-emerald-100 lg:text-emerald-950 dark:lg:text-white md:px-6 md:py-2 lg:hover:bg-amber-400 dark:lg:hover:bg-emerald-700 underline md:no-underline font-bold">Get in Touch</a></li>
         </ul>
     </nav>
 
@@ -296,5 +241,61 @@
     <button id="theme-toggle" class="fixed w-12 h-12 flex items-center place-content-center bg-amber-50 border border-amber-200 dark:bg-emerald-950 dark:border-emerald-800 rounded-full text-lg bottom-8 right-8">
         <span id="theme-icon" class="material-symbols-outlined">dark_mode</span>
     </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check for saved user preference or system preference
+            const userPreference = localStorage.getItem('theme');
+            const systemPreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (userPreference) {
+                document.documentElement.classList.toggle('dark', userPreference === 'dark');
+            } else if (systemPreference) {
+                document.documentElement.classList.add('dark');
+            }
+
+            // Toggle theme function
+            const toggleTheme = () => {
+                const isDark = document.documentElement.classList.toggle('dark');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                updateIcon(isDark);
+            };
+
+            // Update icon based on theme
+            const updateIcon = (isDark) => {
+                const iconElement = document.getElementById('theme-icon');
+                iconElement.textContent = isDark ? 'light_mode' : 'dark_mode';
+            };
+
+            // Attach event listener to button
+            document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+
+            // Set the initial icon
+            updateIcon(document.documentElement.classList.contains('dark'));
+
+            // Toggle switch button for showing after images
+            const switchButton = document.querySelector('.setting button[role="switch"]');
+            const switchLabel = document.querySelector('.setting span strong');
+            const beforeElements = document.querySelectorAll('.item .before');
+
+            const toggleSwitch = () => {
+                const isEnabled = switchButton.getAttribute('aria-checked') === 'true';
+                switchButton.setAttribute('aria-checked', !isEnabled);
+                switchButton.classList.toggle('bg-amber-600', !isEnabled);
+                switchButton.classList.toggle('bg-amber-200', isEnabled);
+                const toggleSpan = switchButton.querySelector('span[aria-hidden="true"]');
+                toggleSpan.classList.toggle('translate-x-5', !isEnabled);
+                toggleSpan.classList.toggle('translate-x-0', isEnabled);
+                switchLabel.textContent = !isEnabled ? 'before' : 'after';
+
+                // Toggle visibility of before elements
+                beforeElements.forEach((beforeElement) => {
+                    beforeElement.classList.toggle('opacity-100', !isEnabled);
+                });
+            };
+
+            switchButton.addEventListener('click', toggleSwitch);
+        });
+    </script>
 </body>
 </html>
